@@ -93,6 +93,7 @@ export const Manifest = {
       apps: [
         {name: 'Secrets of Toanium'},
         {name: 'Rokugan Recorder'},
+        {name: "Character Thing"},
       ],
     }
   ]
