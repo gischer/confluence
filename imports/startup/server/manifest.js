@@ -94,6 +94,7 @@ export const Manifest = {
         {name: 'Secrets of Toanium'},
         {name: 'Rokugan Recorder'},
         {name: "Character Thing"},
+        {name: "Cloud Storage Manager"},
       ],
     }
   ]
