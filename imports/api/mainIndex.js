@@ -150,7 +150,9 @@ export function crunchAppStatus(app) {
       }
   }
   const files = Files.find({appId: app._id, appVersionNumber: app.versionNumber, sourceId: app.sourceId}).fetch();
-  if (files.length == 0) return "Needs update";s
+  if (files.length == 0) {
+    console.log(`${app.name} is new`);
+    return "Needs update";
   return R.reduce(statusReducer, 'Ready', files);
 }
 
