@@ -153,6 +153,7 @@ export function crunchAppStatus(app) {
   if (files.length == 0) {
     console.log(`${app.name} is new`);
     return "Needs update";
+  }
   return R.reduce(statusReducer, 'Ready', files);
 }
 

@@ -15,12 +15,14 @@ export function downloadSource(sourceRef) {
   }
 
   function appIsIncluded(app) {
+    console.log(`checking to see if ${app.name} is included`)
     function appSpecified(accum, srcApp) {
-      console.log(`checking if ${srcApp.name} === ${app.name}: ${srcApp.name === app.name}`)
       if (accum) return true;
       return (srcApp.name === app.name)
     }
-    return R.reduce(appSpecified, false, sourceRef.apps)
+    const result = R.reduce(appSpecified, false, sourceRef.apps);
+    console.log(result);
+    return result;
   }
 
   return new Promise((resolve, reject) => {
