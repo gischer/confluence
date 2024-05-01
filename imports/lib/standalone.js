@@ -15,7 +15,10 @@ export function downloadSource(sourceRef) {
   }
 
   function appIsIncluded(app) {
-    console.log(`checking to see if ${app.name} is included`)
+    console.log(`Check if ${app.name} is included`)
+    if (sourceRef.apps[0] === "*") {
+      return true;
+    }
     function appSpecified(accum, srcApp) {
       if (accum) return true;
       return (srcApp.name === app.name)

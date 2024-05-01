@@ -90,12 +90,7 @@ export const Manifest = {
     {
       name: 'Mansia App Index',
       baseUrl: 'https://o9yg4ss2m74ujs6rahta.mansia.net',
-      apps: [
-        {name: 'Secrets of Toanium'},
-        {name: 'Rokugan Recorder'},
-        {name: "Character Thing"},
-        {name: "Cloud Storage Manager"},
-      ],
+      apps: ["*"],
     }
   ]
 }
